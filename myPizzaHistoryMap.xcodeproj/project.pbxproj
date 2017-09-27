@@ -12,6 +12,7 @@
 		FEED3E241F7B4F380021F87B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEED3E221F7B4F380021F87B /* Main.storyboard */; };
 		FEED3E261F7B4F380021F87B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEED3E251F7B4F380021F87B /* Assets.xcassets */; };
 		FEED3E291F7B4F380021F87B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEED3E271F7B4F380021F87B /* LaunchScreen.storyboard */; };
+		FEFDF5921F7B574400C91867 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFDF5911F7B574400C91867 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FEED3E251F7B4F380021F87B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEED3E281F7B4F380021F87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEED3E2A1F7B4F380021F87B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEFDF5911F7B574400C91867 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFDF5921F7B574400C91867 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				FEED3E1D1F7B4F380021F87B /* myPizzaHistoryMap */,
 				FEED3E1C1F7B4F380021F87B /* Products */,
+				FEFDF5901F7B574400C91867 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				FEED3E2A1F7B4F380021F87B /* Info.plist */,
 			);
 			path = myPizzaHistoryMap;
+			sourceTree = "<group>";
+		};
+		FEFDF5901F7B574400C91867 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEFDF5911F7B574400C91867 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +109,11 @@
 					FEED3E1A1F7B4F380021F87B = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

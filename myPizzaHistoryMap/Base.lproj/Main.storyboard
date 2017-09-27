@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,85 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myPizzaHistoryMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lug-VS-kJ0">
+                                <rect key="frame" x="0.0" y="619" width="375" height="29"/>
+                                <segments>
+                                    <segment title="Naples"/>
+                                    <segment title="New York"/>
+                                    <segment title="Chicago"/>
+                                    <segment title="Chatham"/>
+                                    <segment title="Bev. Hills"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xi-B1-hRh">
+                                <rect key="frame" x="59" y="30" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="3D"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hf-an-VEw">
+                                <rect key="frame" x="139" y="30" width="70" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Features"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjU-qH-kV0">
+                                <rect key="frame" x="239" y="30" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Here"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGg-OH-NTV">
+                                <rect key="frame" x="313" y="30" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Find"/>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cuw-9I-pOG">
+                                <rect key="frame" x="0.0" y="68" width="375" height="543"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqu-Wq-Wme">
+                                <rect key="frame" x="10" y="30" width="34" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Type"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lug-VS-kJ0" secondAttribute="bottom" constant="20" id="2Zw-hX-CCq"/>
+                            <constraint firstItem="JGg-OH-NTV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5oF-Dc-lkT"/>
+                            <constraint firstItem="JGg-OH-NTV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9ic-wg-7kr"/>
+                            <constraint firstItem="gjU-qH-kV0" firstAttribute="leading" secondItem="5hf-an-VEw" secondAttribute="trailing" constant="5" id="A7v-lw-Yvj"/>
+                            <constraint firstItem="Aqu-Wq-Wme" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CJt-E6-Ix7"/>
+                            <constraint firstItem="5hf-an-VEw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="DLL-Bs-SmW"/>
+                            <constraint firstItem="gjU-qH-kV0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="F2e-fl-t2I"/>
+                            <constraint firstItem="JGg-OH-NTV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Ftd-IB-8pX"/>
+                            <constraint firstItem="JGg-OH-NTV" firstAttribute="leading" secondItem="gjU-qH-kV0" secondAttribute="trailing" constant="5" id="FxP-wa-gUv"/>
+                            <constraint firstItem="5hf-an-VEw" firstAttribute="leading" secondItem="3Xi-B1-hRh" secondAttribute="trailing" constant="5" id="IwY-FS-HVj"/>
+                            <constraint firstItem="5hf-an-VEw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="K1k-2C-hpz"/>
+                            <constraint firstItem="Aqu-Wq-Wme" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="KCA-B2-eij"/>
+                            <constraint firstItem="gjU-qH-kV0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="KSu-NR-eFS"/>
+                            <constraint firstItem="3Xi-B1-hRh" firstAttribute="leading" secondItem="Aqu-Wq-Wme" secondAttribute="trailing" constant="5" id="LuR-Ar-FOZ"/>
+                            <constraint firstItem="cuw-9I-pOG" firstAttribute="top" secondItem="3Xi-B1-hRh" secondAttribute="bottom" constant="8" id="MhB-eu-tEL"/>
+                            <constraint firstItem="3Xi-B1-hRh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ciR-Oa-7CT"/>
+                            <constraint firstItem="3Xi-B1-hRh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="et2-jF-DEQ"/>
+                            <constraint firstItem="Lug-VS-kJ0" firstAttribute="top" secondItem="cuw-9I-pOG" secondAttribute="bottom" constant="8" id="ewK-PQ-wx2"/>
+                            <constraint firstItem="Aqu-Wq-Wme" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="gow-gk-tpI"/>
+                            <constraint firstItem="cuw-9I-pOG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hQW-zb-sAk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JGg-OH-NTV" secondAttribute="trailing" constant="5" id="j3q-oY-vrw"/>
+                            <constraint firstItem="Aqu-Wq-Wme" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ke6-fi-SYB"/>
+                            <constraint firstItem="5hf-an-VEw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="muW-tx-sJO"/>
+                            <constraint firstItem="gjU-qH-kV0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="nVH-Nt-lAX"/>
+                            <constraint firstItem="3Xi-B1-hRh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="rkQ-ry-40h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cuw-9I-pOG" secondAttribute="trailing" id="xwp-od-hEO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
