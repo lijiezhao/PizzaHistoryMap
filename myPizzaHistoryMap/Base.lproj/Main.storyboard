@@ -26,6 +26,9 @@
                                     <segment title="Chatham"/>
                                     <segment title="Bev. Hills"/>
                                 </segments>
+                                <connections>
+                                    <action selector="locationPicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sil-8r-MaI"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xi-B1-hRh">
                                 <rect key="frame" x="59" y="30" width="46" height="30"/>
@@ -46,6 +49,9 @@
                                 <rect key="frame" x="313" y="30" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Find"/>
+                                <connections>
+                                    <action selector="findPizza:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWM-32-s3F"/>
+                                </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cuw-9I-pOG">
                                 <rect key="frame" x="0.0" y="68" width="375" height="543"/>
@@ -87,6 +93,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="MapView" destination="cuw-9I-pOG" id="Q77-um-K7d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
