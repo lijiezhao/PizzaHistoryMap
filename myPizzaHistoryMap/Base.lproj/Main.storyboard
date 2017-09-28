@@ -62,7 +62,7 @@
                                     <action selector="findPizza:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWM-32-s3F"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cuw-9I-pOG">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsBuildings="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuw-9I-pOG">
                                 <rect key="frame" x="0.0" y="65" width="375" height="554"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqu-Wq-Wme">

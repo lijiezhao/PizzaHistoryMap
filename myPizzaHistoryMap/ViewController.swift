@@ -68,8 +68,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func toggleMapFeatures(_ sender: UIButton) {
-        MapView.showsBuildings = isOn
-        isOn = !isOn
+        //MapView.showsBuildings = isOn
+        //isOn = !isOn
+        isOn = !MapView.showsPointsOfInterest
+        MapView.showsPointsOfInterest = isOn
+        MapView.showsScale = isOn
+        MapView.showsCompass = isOn
+        MapView.showsTraffic = isOn
     }
     
     @IBAction func findHere(_ sender: UIButton) {
