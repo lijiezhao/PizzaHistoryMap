@@ -29,11 +29,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateMapRegion(rangeSpan: 500)
+        updateMapRegion(rangeSpan: 100)
     }
 
     //Propertieis and outlets
     var coordinate2D = CLLocationCoordinate2DMake(40.8367321, 14.2468856)
+    var camera = MKMapCamera()
     
     //Outlets
     @IBOutlet weak var changePitch: UIButton!
@@ -63,15 +64,21 @@ class ViewController: UIViewController {
             coordinate2D = CLLocationCoordinate2DMake(40.8367321, 14.2468856)
         case 1: //New York
             coordinate2D = CLLocationCoordinate2DMake(40.7216294, -73.995453)
+            updateMapCamera(heading: 245.0, altitude: 1000)
+            return
         case 2: //Chicago
             coordinate2D = CLLocationCoordinate2DMake(41.892479, -87.6267592)
+            updateMapCamera(heading: 12.0, altitude: 50)
+            return
         case 3: //Chatham
             coordinate2D = CLLocationCoordinate2DMake(42.4056555, -82.1860369)
+            updateMapCamera(heading: 180, altitude: 1000)
         case 4: //Beverly Hills
             coordinate2D = CLLocationCoordinate2DMake(34.0674607, -118.3977309)
         default:
             coordinate2D = CLLocationCoordinate2DMake(40.8367321, 14.2468856)
         }
+        updateMapRegion(rangeSpan: 100)
     }
     
     
@@ -79,6 +86,13 @@ class ViewController: UIViewController {
     func updateMapRegion(rangeSpan:CLLocationDistance) {
         let region = MKCoordinateRegionMakeWithDistance(coordinate2D, rangeSpan, rangeSpan)
         MapView.region = region
+    }
+    
+    func updateMapCamera(heading:CLLocationDirection, altitude:CLLocationDistance){
+        camera.centerCoordinate = coordinate2D
+        camera.heading = heading
+        camera.altitude = altitude
+        MapView.camera = camera
     }
 }
 
