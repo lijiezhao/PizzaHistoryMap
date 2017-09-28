@@ -34,16 +34,25 @@
                                 <rect key="frame" x="59" y="30" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="3D"/>
+                                <connections>
+                                    <action selector="changePitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F4J-V3-r2G"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hf-an-VEw">
                                 <rect key="frame" x="139" y="30" width="70" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Features"/>
+                                <connections>
+                                    <action selector="toggleMapFeatures:" destination="BYZ-38-t0r" eventType="touchUpInside" id="esA-0y-8vZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjU-qH-kV0">
                                 <rect key="frame" x="239" y="30" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Here"/>
+                                <connections>
+                                    <action selector="findHere:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z03-rI-EgW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGg-OH-NTV">
                                 <rect key="frame" x="313" y="30" width="46" height="30"/>
@@ -60,6 +69,9 @@
                                 <rect key="frame" x="10" y="30" width="34" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Type"/>
+                                <connections>
+                                    <action selector="changeMapType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SRk-Ds-hea"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -93,6 +105,8 @@
                     </view>
                     <connections>
                         <outlet property="MapView" destination="cuw-9I-pOG" id="Q77-um-K7d"/>
+                        <outlet property="changeMapType" destination="Aqu-Wq-Wme" id="Kvo-fh-de4"/>
+                        <outlet property="changePitch" destination="3Xi-B1-hRh" id="XQT-f0-Ii6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

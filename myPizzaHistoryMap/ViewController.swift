@@ -35,6 +35,8 @@ class ViewController: UIViewController {
     //Propertieis and outlets
     var coordinate2D = CLLocationCoordinate2DMake(40.8367321, 14.2468856)
     var camera = MKMapCamera()
+    var pitch = 0
+    var isOn = false
     
     //Outlets
     @IBOutlet weak var changePitch: UIButton!
@@ -43,12 +45,31 @@ class ViewController: UIViewController {
     
     //Actions
     @IBAction func changeMapType(_ sender: UIButton) {
+        switch MapView.mapType{
+        case.standard:
+            MapView.mapType = .satellite
+        case.satellite:
+            MapView.mapType = .hybrid
+        case.hybrid:
+            MapView.mapType = .satelliteFlyover
+        case.satelliteFlyover:
+            MapView.mapType = .hybridFlyover
+        case.hybridFlyover:
+            MapView.mapType = .standard
+        default:
+            MapView.mapType = .standard
+        }
     }
     
     @IBAction func changePitch(_ sender: UIButton) {
+        pitch = (pitch + 15) % 90
+        sender.setTitle("\(pitch)º", for: .normal)
+        MapView.camera.pitch = CGFloat(pitch)
     }
     
     @IBAction func toggleMapFeatures(_ sender: UIButton) {
+        MapView.showsBuildings = isOn
+        isOn = !isOn
     }
     
     @IBAction func findHere(_ sender: UIButton) {
@@ -64,7 +85,7 @@ class ViewController: UIViewController {
             coordinate2D = CLLocationCoordinate2DMake(40.8367321, 14.2468856)
         case 1: //New York
             coordinate2D = CLLocationCoordinate2DMake(40.7216294, -73.995453)
-            updateMapCamera(heading: 245.0, altitude: 1000)
+            updateMapCamera(heading: 245.0, altitude: 250)
             return
         case 2: //Chicago
             coordinate2D = CLLocationCoordinate2DMake(41.892479, -87.6267592)
@@ -92,6 +113,8 @@ class ViewController: UIViewController {
         camera.centerCoordinate = coordinate2D
         camera.heading = heading
         camera.altitude = altitude
+        camera.pitch = 0.0
+        changePitch.setTitle("0º", for: .normal)
         MapView.camera = camera
     }
 }
