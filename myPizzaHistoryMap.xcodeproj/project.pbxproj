@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE9ECDE41F7DA43300AB6594 /* PizzaAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9ECDE31F7DA43300AB6594 /* PizzaAnnotation.swift */; };
 		FEED3E1F1F7B4F380021F87B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED3E1E1F7B4F380021F87B /* AppDelegate.swift */; };
 		FEED3E211F7B4F380021F87B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED3E201F7B4F380021F87B /* ViewController.swift */; };
 		FEED3E241F7B4F380021F87B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEED3E221F7B4F380021F87B /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE9ECDE31F7DA43300AB6594 /* PizzaAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaAnnotation.swift; sourceTree = "<group>"; };
 		FEED3E1B1F7B4F380021F87B /* myPizzaHistoryMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myPizzaHistoryMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEED3E1E1F7B4F380021F87B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEED3E201F7B4F380021F87B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				FEED3E1E1F7B4F380021F87B /* AppDelegate.swift */,
 				FEED3E201F7B4F380021F87B /* ViewController.swift */,
+				FE9ECDE31F7DA43300AB6594 /* PizzaAnnotation.swift */,
 				FEED3E221F7B4F380021F87B /* Main.storyboard */,
 				FEED3E251F7B4F380021F87B /* Assets.xcassets */,
 				FEED3E271F7B4F380021F87B /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9ECDE41F7DA43300AB6594 /* PizzaAnnotation.swift in Sources */,
 				FEED3E211F7B4F380021F87B /* ViewController.swift in Sources */,
 				FEED3E1F1F7B4F380021F87B /* AppDelegate.swift in Sources */,
 			);
